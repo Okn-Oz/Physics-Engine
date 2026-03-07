@@ -133,6 +133,7 @@ CMakeFiles/PhysicsEngine.dir/main.cpp.o: /home/okan/sfml_demo/main.cpp \
   /usr/include/c++/13/iomanip \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/iterator \
   /usr/include/c++/13/limits \
@@ -413,6 +414,7 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
   /usr/include/c++/13/bits/shared_ptr.h \
   /usr/include/c++/13/bits/shared_ptr_atomic.h \
   /usr/include/c++/13/bits/shared_ptr_base.h \
+  /usr/include/c++/13/bits/specfun.h \
   /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/stl_algo.h \
@@ -447,6 +449,7 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/chrono \
   /usr/include/c++/13/clocale \
+  /usr/include/c++/13/cmath \
   /usr/include/c++/13/codecvt \
   /usr/include/c++/13/compare \
   /usr/include/c++/13/cstddef \
@@ -471,6 +474,7 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
   /usr/include/c++/13/iomanip \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/iterator \
   /usr/include/c++/13/limits \
@@ -490,6 +494,18 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/tr1/bessel_function.tcc \
+  /usr/include/c++/13/tr1/beta_function.tcc \
+  /usr/include/c++/13/tr1/ell_integral.tcc \
+  /usr/include/c++/13/tr1/exp_integral.tcc \
+  /usr/include/c++/13/tr1/gamma.tcc \
+  /usr/include/c++/13/tr1/hypergeometric.tcc \
+  /usr/include/c++/13/tr1/legendre_function.tcc \
+  /usr/include/c++/13/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/13/tr1/poly_hermite.tcc \
+  /usr/include/c++/13/tr1/poly_laguerre.tcc \
+  /usr/include/c++/13/tr1/riemann_zeta.tcc \
+  /usr/include/c++/13/tr1/special_function_util.h \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
@@ -505,6 +521,7 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
   /usr/include/libintl.h \
   /usr/include/linux/errno.h \
   /usr/include/locale.h \
+  /usr/include/math.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -523,9 +540,18 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
@@ -678,6 +704,36 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
   /usr/local/include/SFML/Window/WindowHandle.hpp
 
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/c++/13/tr1/special_function_util.h:
+
+/usr/include/c++/13/tr1/riemann_zeta.tcc:
+
+/usr/include/c++/13/tr1/poly_laguerre.tcc:
+
+/usr/include/c++/13/tr1/poly_hermite.tcc:
+
+/usr/include/c++/13/tr1/modified_bessel_func.tcc:
+
+/usr/include/c++/13/tr1/legendre_function.tcc:
+
+/usr/include/c++/13/tr1/gamma.tcc:
+
+/usr/include/c++/13/tr1/exp_integral.tcc:
+
+/usr/include/c++/13/tr1/ell_integral.tcc:
+
+/usr/include/c++/13/tr1/beta_function.tcc:
+
+/usr/include/c++/13/cmath:
+
 /usr/local/include/SFML/Window/WindowHandle.hpp:
 
 /usr/local/include/SFML/Window/Vulkan.hpp:
@@ -687,6 +743,8 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
 /usr/local/include/SFML/Window/Touch.hpp:
 
 /usr/local/include/SFML/Window/Keyboard.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
 /usr/local/include/SFML/Window/Event.inl:
 
@@ -780,6 +838,8 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
+
 /usr/include/c++/13/ext/type_traits.h:
 
 /usr/include/c++/13/ext/string_conversions.h:
@@ -805,6 +865,8 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
 /usr/include/c++/13/cstdio:
 
 /usr/include/c++/13/bits/fs_path.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/local/include/SFML/Window/WindowEnums.hpp:
 
@@ -848,6 +910,8 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
+/usr/include/c++/13/bits/specfun.h:
+
 /usr/include/c++/13/bits/streambuf.tcc:
 
 /usr/include/c++/13/bits/unordered_map.h:
@@ -861,6 +925,8 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
 /usr/include/c++/13/bits/stl_uninitialized.h:
 
 /usr/include/c++/13/locale:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/local/include/SFML/Graphics/Shader.hpp:
 
@@ -924,6 +990,8 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
+/usr/include/c++/13/tr1/hypergeometric.tcc:
+
 /usr/include/c++/13/bits/range_access.h:
 
 /usr/include/c++/13/compare:
@@ -953,6 +1021,8 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
 /usr/local/include/SFML/Graphics/Transformable.hpp:
 
 /usr/include/c++/13/bits/cxxabi_forced.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
 /usr/include/c++/13/bits/streambuf_iterator.h:
 
@@ -1142,7 +1212,11 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
 
 /usr/include/wchar.h:
 
+/usr/include/c++/13/tr1/bessel_function.tcc:
+
 /usr/include/c++/13/initializer_list:
+
+/usr/include/c++/13/iostream:
 
 /usr/include/c++/13/istream:
 
@@ -1177,6 +1251,8 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/c++/13/string:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/c++/13/string_view:
 
@@ -1284,6 +1360,8 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
 
+/usr/include/math.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/local/include/SFML/System/Vector2.inl:
@@ -1351,5 +1429,3 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
