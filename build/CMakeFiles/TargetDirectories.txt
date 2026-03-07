@@ -1,0 +1,3 @@
+/home/okan/sfml_demo/build/CMakeFiles/PhysicsEngine.dir
+/home/okan/sfml_demo/build/CMakeFiles/edit_cache.dir
+/home/okan/sfml_demo/build/CMakeFiles/rebuild_cache.dir
