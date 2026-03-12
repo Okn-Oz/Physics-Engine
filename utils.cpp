@@ -4,6 +4,7 @@
 #include "utils.hpp"
 #include <cmath>
 #include <iostream>
+#include <string.h>
 
 GameManager::GameManager(sf::RenderWindow& window, float gravity) : gameWindow(window), gravity(gravity){
 }
@@ -87,11 +88,10 @@ void GameManager::CheckCircleCollisions() {
             float dy = center2.y - center1.y;
             
             float distanceSquared = (dx * dx) + (dy * dy);
+            float distance = std::sqrt(distanceSquared);
             float radSum = r1 + r2;
 
-            if(distanceSquared <= (radSum * radSum)){
-                float distance = std::sqrt(distanceSquared);
-
+            if(distance <= radSum){
                 float nx = dx / distance;
                 float ny = dy / distance;
 
@@ -114,23 +114,83 @@ void GameManager::CheckCircleCollisions() {
                 float velAlongNormal = (dvx * nx) + (dvy * ny);
 
                 if(velAlongNormal < 0){
-                    float e = 0.1f;
+                    float e = 1.f;
 
                     float invMass1 = PhysicsObjects[i].isDynamic ? 1.f : 0.f;
                     float invMass2 = PhysicsObjects[j].isDynamic ? 1.f : 0.f;
+                    float impulse = -(e * velAlongNormal) / (invMass1 + invMass2);
 
-                    float j_impulse = -(1.f + e) * velAlongNormal / (invMass1 + invMass2);
-
-                    PhysicsObjects[i].velocity.x -= j_impulse * invMass1 * nx;
-                    PhysicsObjects[i].velocity.y -= j_impulse * invMass1 * ny;
-                    PhysicsObjects[j].velocity.x += j_impulse * invMass2 * nx;
-                    PhysicsObjects[j].velocity.y += j_impulse * invMass2 * ny;
+                    PhysicsObjects[i].velocity.x -= impulse * invMass1 * nx;
+                    PhysicsObjects[i].velocity.y -= impulse * invMass1 * ny;
+                    PhysicsObjects[j].velocity.x += impulse * invMass2 * nx;
+                    PhysicsObjects[j].velocity.y += impulse * invMass2 * ny;
                 }
             }
         }        
     }
 }
 
-void GameManager::CheckRectangleCollisions(){
+void GameManager::CheckRectangleCollisions() {
+    for(int i = 0; i < PhysicsObjects.size(); i++){
 
+        if(PhysicsObjects[i].colliderType != ColliderType::Circle) continue;
+        sf::CircleShape* circle = dynamic_cast<sf::CircleShape*>(PhysicsObjects[i].shape);
+        
+        float radius = circle->getRadius();
+        sf::Vector2f center = circle->getPosition() + sf::Vector2f(radius, radius);
+
+        for(int j = 0; j < PhysicsObjects.size(); j++){
+
+            if(PhysicsObjects[j].colliderType != ColliderType::Rectangle) continue;
+            sf::RectangleShape* rect = dynamic_cast<sf::RectangleShape*>(PhysicsObjects[j].shape);
+            
+            sf::FloatRect rectBounds = rect->getGlobalBounds();
+
+            float closestX = std::clamp(center.x, rectBounds.position.x, rectBounds.position.x + rectBounds.size.x);
+            float closestY = std::clamp(center.y, rectBounds.position.y, rectBounds.position.y + rectBounds.size.y);
+
+            float dx = closestX - center.x;
+            float dy = closestY - center.y;
+            
+            float distanceSquared = (dx * dx) + (dy * dy);
+
+            if(distanceSquared <= (radius * radius)){
+                float distance = std::sqrt(distanceSquared);
+                
+                if (distance == 0.0f) distance = 0.1f;
+
+                float nx = dx / distance;
+                float ny = dy / distance;
+
+                float overlap = radius - distance;
+                
+                float invMass1 = PhysicsObjects[i].isDynamic ? 1.f : 0.f; 
+                float invMass2 = PhysicsObjects[j].isDynamic ? 1.f : 0.f;
+                float totalMass = invMass1 + invMass2;
+
+                if (totalMass > 0.f) {
+                    float push1 = (invMass1 / totalMass) * overlap;
+                    float push2 = (invMass2 / totalMass) * overlap;
+
+                    circle->move({-nx * push1, -ny * push1});
+                    rect->move({nx * push2, ny * push2});
+                }
+
+                float dvx = PhysicsObjects[j].velocity.x - PhysicsObjects[i].velocity.x;
+                float dvy = PhysicsObjects[j].velocity.y - PhysicsObjects[i].velocity.y;
+
+                float velAlongNormal = (dvx * nx) + (dvy * ny);
+
+                if(velAlongNormal < 0){
+                    float e = 1.8f;
+                    float impulse = -(e * velAlongNormal) / totalMass;
+
+                    PhysicsObjects[i].velocity.x -= impulse * invMass1 * nx;
+                    PhysicsObjects[i].velocity.y -= impulse * invMass1 * ny;
+                    PhysicsObjects[j].velocity.x += impulse * invMass2 * nx;
+                    PhysicsObjects[j].velocity.y += impulse * invMass2 * ny;
+                }
+            }
+        }        
+    }
 }

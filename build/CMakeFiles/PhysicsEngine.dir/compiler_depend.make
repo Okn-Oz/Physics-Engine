@@ -528,6 +528,8 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
@@ -711,6 +713,8 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/string.h:
 
 /usr/include/c++/13/tr1/special_function_util.h:
 
@@ -897,6 +901,8 @@ CMakeFiles/PhysicsEngine.dir/utils.cpp.o: /home/okan/sfml_demo/utils.cpp \
 /usr/include/c++/13/bits/uses_allocator.h:
 
 /usr/include/c++/13/bits/postypes.h:
+
+/usr/include/strings.h:
 
 /usr/include/c++/13/iomanip:
 
